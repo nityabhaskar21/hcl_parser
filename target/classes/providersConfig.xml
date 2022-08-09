@@ -1,0 +1,24 @@
+<config>
+    <!-- Each record will end with this -->
+    
+    <searches>
+        <!-- Some rules for finding text, to make the values a little easier below -->
+        <search id="interface"><![CDATA[(provider)]]></search>
+        <search id="stringToEOL"><![CDATA["(.+?)"]]></search>
+        <search id="default"><![CDATA["(.+?)"]]></search>
+        <search id="test"><![CDATA[("(.+?)")]]></search>
+        <search id="close"><![CDATA[(\s*{\s*})]]></search>
+    </searches>
+    <delim at-start="true">^{interface}.*</delim>
+    <values>
+        <!-- some fields that are reusing the patterns above -->
+        <!-- <value id="iface"><![CDATA[{interface}]]></value> -->
+        <value id="providerName"><![CDATA[provider\s*{stringToEOL}]]></value>
+        <value id="providerName1"><![CDATA[provider\s*{test}{close}]]></value>
+        <vaule id="version"><![CDATA[version\s*=\s*{default}]]></vaule>
+        <vaule id="project"><![CDATA[project\s*=\s*{default}]]></vaule>
+         <vaule id="alias"><![CDATA[alias\s*=\s*{default}]]></vaule>
+          <vaule id="region"><![CDATA[region\s*=\s*{default}]]></vaule>
+          <vaule id="name"><![CDATA[name\s*=\s*{default}]]></vaule>
+    </values>
+</config>

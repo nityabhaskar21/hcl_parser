@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: 016817
+Build-Jdk: 15.0.1
+Implementation-Title: parse-poc
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.sify.cmp
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/com.sify.cmp.parse
+Created-By: Maven Integration for Eclipse
+

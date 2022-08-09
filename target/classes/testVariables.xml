@@ -1,0 +1,18 @@
+<config>
+    <!-- Each record will end with this -->
+    
+    <searches>
+        <!-- Some rules for finding text, to make the values a little easier below -->
+        <search id="interface"><![CDATA[(variable)]]></search>
+        <search id="stringToEOL"><![CDATA["(.+?)"]]></search>
+        <search id="default"><![CDATA["(.+?)"]]></search>
+    </searches>
+    <delim at-start="true">^{interface}.*</delim>
+    <values>
+        <!-- some fields that are reusing the patterns above -->
+        <!-- <value id="iface"><![CDATA[{interface}]]></value> -->
+        <value id="variableName"><![CDATA[variable {stringToEOL}]]></value>
+        <vaule id="defaultValue"><![CDATA[default\s*=\s*{default}]]></vaule>
+        <vaule id="descValue"><![CDATA[description\s*=\s*{default}]]></vaule>
+    </values>
+</config>
